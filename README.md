@@ -1,12 +1,13 @@
 
 # simple_tpl
 Module for convenient html and css templating. No additional dependencies, pure javascript.
+The module to allows you to collect html code in functional style.
 
 ```sh
 npm i simple_tpl -S
 ```
 
-Uglify code:
+For example, this code is little dirty:
 ```js
 var html = '<div>';
 var list_rows = [{ name: '2017.11', calc: 1200, bold: true }, { name: '2017.12' }];
@@ -25,7 +26,7 @@ html+= '</div>';
 console.log(html);
 ```
 
-Using module simple_tpl:
+After using module simple_tpl:
 ```js
 const tpl = require('simple_tpl');
 var html =
@@ -34,9 +35,9 @@ var html =
       var row_name = row.name;
       return (
         '<tr>'+
-          tpl.if(row.calc, () =>
+          tpl.if(row.calc,
             '<td style=text-align:left;'+tpl.if(row.bold, 'font-weight:600;')+'>'+row_name+'</td>'
-          }).else(
+          ).else(
             '<td style=text-align:center;background-color:#EEE; colspan=10>'+row_name+'</td>'
           )
       );
