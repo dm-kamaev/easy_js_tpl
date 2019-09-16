@@ -1,6 +1,6 @@
 {
   "name": "easy_js_tpl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Module for convenient html and css templating. No additional dependencies, pure javascript.",
   "main": "index.js",
   "directories": {
@@ -31,7 +31,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dm-kamaev/js_tpl.git"
+    "url": "https://github.com/dm-kamaev/easy_js_tpl.git"
   },
   "devDependencies": {
     "mocha": "6.2.0"
