@@ -1,5 +1,5 @@
 {
-  "name": "simple_tpl",
+  "name": "js_tpl",
   "version": "0.0.1",
   "description": "Module for convenient html and css templating. No additional dependencies, pure javascript.",
   "main": "index.js",

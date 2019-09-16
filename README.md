@@ -1,10 +1,10 @@
 
-# simple_tpl
+# js_tpl
 Module for convenient html and css templating. No additional dependencies, pure javascript.
 The module to allows you to collect html code in functional style.
 
 ```sh
-npm i simple_tpl -S
+npm i js_tpl -S
 ```
 
 For example, this code is little dirty:
@@ -26,9 +26,9 @@ html+= '</div>';
 console.log(html);
 ```
 
-After using module simple_tpl:
+After using module js_tpl:
 ```js
-const tpl = require('simple_tpl');
+const tpl = require('js_tpl');
 var html =
   '<div>'+
     tpl.foreach([{ name: '2017.11', calc: 1200, bold: true }, { name: '2017.12' }], function (row) {
@@ -48,7 +48,7 @@ console.log(html);
 
 ### foreach(Array, function(value, index): string)
 ```js
-const tpl = require('simple_tpl');
+const tpl = require('js_tpl');
 var html =
   '<div>'+
     tpl.foreach([ 10, 12, 24], (el, i) => '<p> value='+el+' index='+i+' </p>')+
@@ -58,7 +58,7 @@ console.log(html); // <div><p> value=10 index=0 </p><p> value=12 index=1 </p><p>
 
 ### each(Object, function(key, value): string)
 ```js
-const tpl = require('simple_tpl');
+const tpl = require('js_tpl');
 var obj = {
   a: 10,
   b: 12,
@@ -77,7 +77,7 @@ console.log(html); // <div><p>a: 10</p><p>b: 12</p><p>c: 24</p></div>
 ### .else_if(boolean | function():boolean, string | function)
 ### .else(string | function)
 ```js
-const tpl = require('simple_tpl');
+const tpl = require('js_tpl');
 console.log(
   '<div class='+tpl.if(true !== false, 'show')+'>' +
     tpl.if(1 === 1, function() {
@@ -95,7 +95,7 @@ console.log(
 
 if/elseif/else/
 ```js
-const tpl = require('simple_tpl');
+const tpl = require('js_tpl');
 var variable = 2;
 console.log(
   '<div class='+tpl.if(true === false, 'show').else('hide')+'>' +
@@ -114,7 +114,7 @@ console.log(
 
 if/elseif/else/ with fixed string
 ```js
-const tpl = require('simple_tpl');
+const tpl = require('js_tpl');
 var variable = 2;
 console.log(
   '<div class='+tpl.if(true === false, 'show').else('hide')+'>' +
@@ -128,7 +128,7 @@ console.log(
 
 if/elseif/else/ with conditional function
 ```js
-const tpl = require('simple_tpl');
+const tpl = require('js_tpl');
 var variable = 2;
 console.log(
   '<div class='+tpl.if(true === false, 'show').else('hide')+'>' +
@@ -143,7 +143,7 @@ console.log(
 ### class(Object): string
 switcher for css classes on element
 ```js
-const tpl = require('simple_tpl');
+const tpl = require('js_tpl');
 var is_auth = true;
 console.log(
   '<div>'+
