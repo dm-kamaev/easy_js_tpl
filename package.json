@@ -1,0 +1,39 @@
+{
+  "name": "node_tpl",
+  "version": "0.0.1",
+  "description": "Module for convenient html and css templating. No additional dependencies, pure javascript.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./test/test.js"
+  },
+  "keywords": [
+    "template",
+    "html",
+    "engine",
+    "helper",
+    "helpers",
+    "style",
+    "css",
+    "classes",
+    "join strings",
+    "concat strings",
+    "if/else/elseif",
+    "simple rendering html",
+    "handlebars",
+    "mustache",
+    "pug",
+    "jade"
+  ],
+  "author": "dm-kamaev@rambler.ru",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dm-kamaev/simple_tpl.git"
+  },
+  "devDependencies": {
+    "mocha": "6.2.0"
+  }
+}
